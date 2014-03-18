@@ -17,8 +17,19 @@ Gem::Specification.new do |spec|
   spec.test_files    = spec.files.grep(%r{^(test|spec|features)/})
   spec.require_paths = ["lib"]
 
-  spec.add_dependency 'haml'
+  spec.add_runtime_dependency 'haml'
 
-  spec.add_development_dependency "bundler", "~> 1.5"
-  spec.add_development_dependency "rake"
+  # Dev Dependencies
+  spec.add_development_dependency 'flatrack', '~> 1.2'
+  spec.add_development_dependency 'bundler', '~> 1.5'
+  spec.add_development_dependency 'rspec', '~> 2.14'
+  spec.add_development_dependency 'guard', '~> 2.5'
+  spec.add_development_dependency 'guard-rspec', '~> 4.2'
+  spec.add_development_dependency 'guard-bundler', '~> 2.0'
+  spec.add_development_dependency 'pry', '~> 0.9'
+  spec.add_development_dependency 'coveralls', '~> 0.7'
+  spec.add_development_dependency 'simplecov', '~> 0.8'
+  spec.add_development_dependency 'rubocop', '~> 0.18.1'
+  spec.add_development_dependency 'inch', '~> 0.3.2'
+  spec.add_development_dependency 'rake', ['> 0.8.7', '< 10.2']
 end
