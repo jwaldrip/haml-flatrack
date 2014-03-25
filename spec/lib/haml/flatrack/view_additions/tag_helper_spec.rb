@@ -13,6 +13,21 @@ describe Flatrack::View::TagHelper do
       end
     end
 
+    context 'using erb' do
+      it 'should properly render' do
+        template_content = render_template 'html_tag.html.erb'
+        expect(template_content).to eq expected
+      end
+    end
+
+    context 'with a preserved tag' do
+      let(:expected){ render_template 'preserved_tag.html' }
+      it 'should properly render' do
+        template_content = render_template 'preserved_tag.html.haml'
+        expect(template_content).to eq expected
+      end
+    end
+
   end
 
   describe '#image_tag' do

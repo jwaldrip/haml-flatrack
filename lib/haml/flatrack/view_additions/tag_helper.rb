@@ -16,7 +16,7 @@ module Haml
             end
 
             content = html_tag_without_haml(name, *args, &block)
-            content = Haml::Helpers.preserve(content) if preserve && content
+            content = preserve(content) if preserve && content
             content
           end
 

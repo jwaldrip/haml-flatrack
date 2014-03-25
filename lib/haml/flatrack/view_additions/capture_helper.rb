@@ -7,7 +7,7 @@ module Haml
         included do
 
           def capture_with_haml(*args, &block)
-            if Haml::Helpers.block_is_haml?(block)
+            if block_is_haml?(block)
               # double assignment is to avoid warnings
               _hamlout = _hamlout = eval('_hamlout', block.binding) # Necessary since capture_haml checks _hamlout
 

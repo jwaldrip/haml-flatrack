@@ -9,7 +9,9 @@ module Haml
   module Flatrack
     extend ActiveSupport::Autoload
     autoload :ViewAdditions
+    autoload :TemplateAdditions
 
     ::Flatrack::View.class_eval { include ViewAdditions }
+    ::Flatrack::Template.class_eval { extend TemplateAdditions }
   end
 end

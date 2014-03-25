@@ -1,3 +1,5 @@
+require 'haml/helpers/xss_mods'
+
 module Haml
   module Flatrack
     module ViewAdditions
@@ -8,13 +10,18 @@ module Haml
 
       # Loadup constants based on filename and include them
       consts = Dir[File.join dir, base, '*'].map do |f|
-        const = File.basename(f, '.rb').camelize.to_sym
+        File.basename(f, '.rb').camelize.to_sym
+      end
+      consts.each { |c| autoload c }
+      haml_base = self
+      included do
+        consts.each { |c| include haml_base.const_get(c) }
+        include Haml::Helpers
+        include Haml::Helpers::XssMods
       end
 
-      consts.each { |c| autoload c }
-
-      included do
-        consts.each { |c| include const_get(c) }
+      def initialize(response)
+        @haml_buffer = nil
       end
 
     end
