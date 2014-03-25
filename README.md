@@ -1,6 +1,12 @@
 # Haml::Flatrack
+--
+Haml for Flatrack
 
-TODO: Write a gem description
+[![Version](http://allthebadges.io/jwaldrip/haml-flatrack/badge_fury.png)](http://allthebadges.io/jwaldrip/haml-flatrack/badge_fury)
+[![Dependencies](http://allthebadges.io/jwaldrip/haml-flatrack/gemnasium.png)](http://allthebadges.io/jwaldrip/haml-flatrack/gemnasium)
+[![Build Status](http://allthebadges.io/jwaldrip/haml-flatrack/travis.png)](http://allthebadges.io/jwaldrip/haml-flatrack/travis)
+[![Coverage](http://allthebadges.io/jwaldrip/haml-flatrack/coveralls.png)](http://allthebadges.io/jwaldrip/haml-flatrack/coveralls)
+[![Code Climate](http://allthebadges.io/jwaldrip/haml-flatrack/code_climate.png)](http://allthebadges.io/jwaldrip/haml-flatrack/code_climate)
 
 ## Installation
 
@@ -15,10 +21,6 @@ And then execute:
 Or install it yourself as:
 
     $ gem install haml-flatrack
-
-## Usage
-
-TODO: Write usage instructions here
 
 ## Contributing
 
