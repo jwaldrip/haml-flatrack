@@ -1,0 +1,3 @@
+[submodule "vendor/gems/flatrack"]
+	path = vendor/gems/flatrack
+	url = https://github.com/jwaldrip/flatrack.git
